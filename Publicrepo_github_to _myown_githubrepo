@@ -1,0 +1,36 @@
+Steps to Push the Cloned Repository to a New GitHub Repository
+
+
+Clone the original repository using Git Bash. Replace https://github.com/original-repo-owner/original-repo.git with the actual URL of the repository you want to clone.
+sh
+Copy code
+git clone https://github.com/original-repo-owner/original-repo.git
+
+
+Navigate to Your Cloned Repository Directory:
+Open Git Bash and navigate to the directory of the cloned repository.
+sh
+Copy code
+cd path/to/cloned-repo
+
+  
+Add Your New GitHub Repository as a Remote:
+Add your new GitHub repository as a remote. Replace https://github.com/your-username/your-new-repo.git with the URL of your new GitHub repository.
+sh
+Copy code
+git remote add new-repo https://github.com/your-username/your-new-repo.git
+
+
+Push to the New Repository:
+Push the entire repository to the new remote repository. This will push all branches and tags.
+sh
+Copy code
+git push new-repo --all
+
+  
+Set the New Repository as the Default Origin (Optional):
+If you want to make your new repository the default origin for future pushes, you can remove the old origin and rename new-repo to origin.
+sh
+Copy code
+git remote remove origin
+git remote rename new-repo origin
